@@ -111,6 +111,19 @@
             text-align: center;/*文字居中*/
             cursor: pointer;
         }
+        #fhui{
+            display: inline-block;
+            font-size: 28px;
+            width: 120px;
+            height: 28px;
+            background-color: #20a6fa;
+            color: #ffe171;
+            text-shadow: 1px 1px 2px #ffe171;/*字体阴影*/
+            border-radius: 5px;/*圆角属性*/
+            box-shadow: 2px 2px 5px #4c98f5;/*盒子阴影*/
+            text-align: center;/*文字居中*/
+            cursor: pointer;
+        }
         /*给Reset按钮设置属性*/
         #d1{
             left: 0px;
@@ -274,6 +287,12 @@
                 start();
         }
 
+        function fhui() {
+            time=0;//把时间设置为0
+            random_d();//把方块随机打乱函数
+            window.history.back();
+        }
+
         //随机打乱方块函数，我们的思路是从第九块开始，随机生成一个数，然后他们两块对调一下
         function random_d(){
             for(var i=9; i>1; --i){
@@ -334,6 +353,7 @@
         <p>
             <rowspan id="start" onclick="start()">开始</rowspan>
             <rowspan id="reset" onclick="reset()">重来</rowspan>
+            <rowspan id="fhui" onclick="fhui()">返回页面</rowspan>
         </p>
         <!--显示控制按钮区域-->
     </div>
